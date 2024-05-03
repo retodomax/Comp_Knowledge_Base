@@ -1,0 +1,29 @@
+# File System
+
+* Determines standard how data is stored on drive (Hard drive, SSD, External hard drive, USB flash drive, Memory cards, ...)
+* Are applied when you format a drive
+* [Youtube: Explaining File Systems](https://youtu.be/_h30HBYxtws)
+* Recommendation
+  - System
+    + Linux: ext4
+    + Windows: NTFS
+    + macOS: APFS
+  - USB drive/Memory card
+    + exFAT (large capacity)
+    + FAT32 (capacity < 32GB)
+  - External hard drive
+    + exFAT or NTFS
+* Families
+  - FAT12, FAT16, FAT32
+    + Old
+    + Widely compatible across OS
+    + Limited file/volume size (max 4GB file, max 32GB volume)
+  - exFAT
+    - Default for high capacity USB flash drives/memory cards
+  - NTFS
+    + Windows
+  - ext2, ext3, ext4
+    + Linux
+  - HFS, APFS
+    + macOS
+

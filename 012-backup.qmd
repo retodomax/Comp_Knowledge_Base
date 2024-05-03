@@ -1,0 +1,57 @@
+# Backup {#backup}
+
+* [General Recommendation](https://thewirecutter.com/reviews/how-to-back-up-your-computer/)
+  - 3-2-1 rule
+    + 3 copys of your data
+    + 2 locations (different devices)
+    + 1 off-site location
+  - Incremental backup
+    + Computationally efficient
+    + Needs less storage
+  - Security
+    + Encryption
+* Hardware
+  - Manually connected Hard drive
+  - [NAS](https://www.howtogeek.com/208030/how-to-set-up-a-nas-network-attached-storage-drive/)
+  - Cloud
+* Recommended `back in time` (GUI Frontend)
+  - backend is `rsync`
+  - Installation: From Discover Software center
+  - [Tutorial](https://www.howtogeek.com/110138/how-to-back-up-your-linux-system-with-back-in-time/)
+  - [Documentation](https://backintime.readthedocs.io/en/latest/)
+  - Important: External hard disk needs to be automatically mounted, such that backup starts
+      + `System settings` > `Removable Storage` > `Removable Devices` > Enable automatic mounting of removable media
+  - For faster backup
+      + Back in time > Einstellungen > Ausschliessen > Ordner hinzufuegen > `/home/reto/R`
+      + Lot of changes in this folder which we do not need...
+      + Exclude additional folders
+          - `.TinyTex`, `.config/` especially `.config/google-chrome`, `.local`, ...
+* New recommendations
+  - [restic](https://restic.net/)
+    + Newest development
+    + Many features: Encryption, cross-platform, ...
+  - [rdiff-backup](https://rdiff-backup.net/)
+    + Simple reverse differential backup tool based on rsync
+    + Not many features
+    + [Tutorial](https://www.thomas-krenn.com/de/wiki/Backup_unter_Linux_mit_rdiff-backup)
+* Alternatives
+  - [borg](https://www.borgbackup.org/)
+    + As feature rich as restic
+  - [rsnapshot](https://rsnapshot.org/)
+    + even simpler than rdiff-backup
+    + [explanation](https://serverfault.com/questions/136861/which-is-best-for-backups-rsync-vs-rdiff-vs-rsnapshot/136878)
+  - GUI: [DejaDup](https://wiki.gnome.org/Apps/DejaDup) (problem: does not allow to restore single files)
+  - Full list of alternatives
+    + [Restic collection](https://github.com/restic/others)
+    + [Archlinux wiki collection](https://wiki.archlinux.org/title/Synchronization_and_backup_programs)
+
+# Classic tools
+
+* `rsync`
+  - Utility for efficiently transferring and synchronizing files between storage devices by comparing the modification times and sizes of files
+  - [Docs](https://rsync.samba.org/documentation.html)
+* `rclone`
+  - A command line program to manage files on cloud storage
+  - [Docs](https://rclone.org/docs/)
+  - Third party tutorials
+    + https://www.howtogeek.com/451262/how-to-use-rclone-to-back-up-to-google-drive-on-linux/
