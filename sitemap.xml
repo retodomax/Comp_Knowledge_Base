@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://example.com/index.html</loc>
+    <lastmod>2024-05-03T06:07:06.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example.com/001-file-sys.html</loc>
+    <lastmod>2024-05-03T06:07:06.779Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example.com/010-kubuntu-setup.html</loc>
+    <lastmod>2024-05-03T06:07:06.779Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example.com/011-keyboard.html</loc>
+    <lastmod>2024-05-03T06:07:06.779Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example.com/012-backup.html</loc>
+    <lastmod>2024-05-03T06:07:06.779Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example.com/013-linux-cloud.html</loc>
+    <lastmod>2024-05-03T06:07:06.779Z</lastmod>
+  </url>
+</urlset>

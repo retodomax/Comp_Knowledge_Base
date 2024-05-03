@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Computer Knowledge Base - 2&nbsp; Linux setup Kubuntu</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./011-keyboard.html" rel="next">
+<link href="./001-file-sys.html" rel="prev">
+<link href="./figures/01_cover/cover_drawing.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta name="twitter:title" content="Computer Knowledge Base - 2&nbsp; Linux setup Kubuntu">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./010-kubuntu-setup.html">Kubuntu</a></li><li class="breadcrumb-item"><a href="./010-kubuntu-setup.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Linux setup Kubuntu</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Computer Knowledge Base</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/quarto-dev/quarto-demo" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Computer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./001-file-sys.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">File System</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Kubuntu</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./010-kubuntu-setup.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Linux setup Kubuntu</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./011-keyboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Remap keybord</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./012-backup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Backup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./013-linux-cloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Linux Clouds</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Software</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Latex</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Media</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Web</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Topics</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Tasks</span></span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation"><span class="header-section-number">2.1</span> Installation</a></li>
+  <li><a href="#kde-wallet" id="toc-kde-wallet" class="nav-link" data-scroll-target="#kde-wallet"><span class="header-section-number">2.2</span> KDE Wallet</a></li>
+  <li><a href="#some-configurations-new-since-eth-computer" id="toc-some-configurations-new-since-eth-computer" class="nav-link" data-scroll-target="#some-configurations-new-since-eth-computer"><span class="header-section-number">2.3</span> Some configurations (New since ETH Computer)</a></li>
+  <li><a href="#easy-tasks" id="toc-easy-tasks" class="nav-link" data-scroll-target="#easy-tasks"><span class="header-section-number">2.4</span> Easy tasks</a></li>
+  <li><a href="#installing-r" id="toc-installing-r" class="nav-link" data-scroll-target="#installing-r"><span class="header-section-number">2.5</span> Installing R</a></li>
+  <li><a href="#remap-keyboard" id="toc-remap-keyboard" class="nav-link" data-scroll-target="#remap-keyboard"><span class="header-section-number">2.6</span> Remap Keyboard</a></li>
+  <li><a href="#installing-latex" id="toc-installing-latex" class="nav-link" data-scroll-target="#installing-latex"><span class="header-section-number">2.7</span> Installing Latex</a></li>
+  <li><a href="#installing-aoe2" id="toc-installing-aoe2" class="nav-link" data-scroll-target="#installing-aoe2"><span class="header-section-number">2.8</span> Installing AOE2</a></li>
+  <li><a href="#set-up-backup" id="toc-set-up-backup" class="nav-link" data-scroll-target="#set-up-backup"><span class="header-section-number">2.9</span> Set up Backup</a></li>
+  <li><a href="#dualboot-with-windows" id="toc-dualboot-with-windows" class="nav-link" data-scroll-target="#dualboot-with-windows"><span class="header-section-number">2.10</span> Dualboot with Windows</a></li>
+  <li><a href="#troubles" id="toc-troubles" class="nav-link" data-scroll-target="#troubles"><span class="header-section-number">2.11</span> Troubles</a>
+  <ul class="collapse">
+  <li><a href="#locales" id="toc-locales" class="nav-link" data-scroll-target="#locales"><span class="header-section-number">2.11.1</span> Locales</a></li>
+  <li><a href="#dvd" id="toc-dvd" class="nav-link" data-scroll-target="#dvd"><span class="header-section-number">2.11.2</span> DVD</a></li>
+  <li><a href="#scrolling-with-touchpat" id="toc-scrolling-with-touchpat" class="nav-link" data-scroll-target="#scrolling-with-touchpat"><span class="header-section-number">2.11.3</span> Scrolling with touchpat</a></li>
+  <li><a href="#during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed" id="toc-during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed" class="nav-link" data-scroll-target="#during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed"><span class="header-section-number">2.11.4</span> During shutdown, computer goes to sleep mode if lid is closed</a></li>
+  <li><a href="#search-in-dolphin-is-slow" id="toc-search-in-dolphin-is-slow" class="nav-link" data-scroll-target="#search-in-dolphin-is-slow"><span class="header-section-number">2.11.5</span> Search in Dolphin is slow</a></li>
+  </ul></li>
+  <li><a href="#useful-software" id="toc-useful-software" class="nav-link" data-scroll-target="#useful-software"><span class="header-section-number">2.12</span> Useful software</a></li>
+  <li><a href="#inkscape" id="toc-inkscape" class="nav-link" data-scroll-target="#inkscape"><span class="header-section-number">2.13</span> Inkscape</a></li>
+  <li><a href="#maybe-useful" id="toc-maybe-useful" class="nav-link" data-scroll-target="#maybe-useful"><span class="header-section-number">2.14</span> Maybe useful</a></li>
+  <li><a href="#connect-with-phone" id="toc-connect-with-phone" class="nav-link" data-scroll-target="#connect-with-phone"><span class="header-section-number">2.15</span> Connect with Phone</a></li>
+  <li><a href="#mouse-middle-click-scrolling-auto-scrolling" id="toc-mouse-middle-click-scrolling-auto-scrolling" class="nav-link" data-scroll-target="#mouse-middle-click-scrolling-auto-scrolling"><span class="header-section-number">2.16</span> Mouse middle click scrolling (Auto-Scrolling)</a></li>
+  <li><a href="#logitech-mouse" id="toc-logitech-mouse" class="nav-link" data-scroll-target="#logitech-mouse"><span class="header-section-number">2.17</span> Logitech Mouse</a></li>
+  <li><a href="#eth-stuff" id="toc-eth-stuff" class="nav-link" data-scroll-target="#eth-stuff"><span class="header-section-number">2.18</span> ETH stuff</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/quarto-dev/quarto-demo/edit/master/010-kubuntu-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<p style="display:none;"> % Tag useful such that part is included but already hidden even before rendering of MathJax.
+\(
+\newcommand{\bm}[1]{\boldsymbol{#1}}
+% \newcommand{\bm}[1]{\boldsymbol{\mathbf{#1}}}  % Use this if you prefere upright (not italic) vectors and matrices
+
+% Operators
+\newcommand{\tr}{{}^{\intercal}}               % transpose (needs amssymb)
+\newcommand{\inv}{^{-1}}                       % inverse
+\renewcommand{\d}[1]{\operatorname{d}\!{#1}}  % dx
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}           % L2 Norm
+\DeclareMathOperator*{\argmin}{arg\, min}
+\DeclareMathOperator*{\argmax}{arg\, max}
+\DeclareMathOperator{\diag}{diag}
+
+\newcommand{\E}{\mathbf{E}}  % Depreciated: delete as soon as possible... Use \ERW{}
+
+% Matrix
+\newcommand{\bigzero}{\mbox{\normalfont\Large\bfseries 0}}  % big zero in matrix
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}} % vertical bar to separate matrix
+
+% SfS stuff
+\newcommand{\iid}{\mbox{ i.i.d. }}
+\newcommand{\Xsub}[2]{{#1}_{\mathrm{\scriptscriptstyle #2}}}
+\newcommand{\wh}[1]{{}\kern0.1em\widehat{\kern-0.1em#1}{}}
+
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Cor}{Corr}
+
+\newcommand{\ekl}{[}     % Erwartungswert Klammer links
+\newcommand{\ekr}{]}     % Erwartungswert Klammer rechts
+\newcommand{\ckl}{(}     % (Co)variance Klammer links
+\newcommand{\ckr}{)}
+\newcommand{\pkl}{(}     % Probability Klammer links
+\newcommand{\pkr}{)}
+\newcommand{\vkl}{(}     % Verteilungs Klammer links
+\newcommand{\vkr}{)}
+
+\newcommand{\ERWSymbol}{\mathbf{E}}  % vorbereitet zum Anpassen an individuelle Styles
+\newcommand{\VARSymbol}{\Var}
+\newcommand{\COVSymbol}{\Cov}
+\newcommand{\CORSymbol}{\Cor}
+\DeclareMathOperator{\PRSymbol}{P}
+\newcommand{\NormalSymbol}{\mathcal{N}}
+\DeclareMathOperator{\BinomialSymbol}{\mathcal{B}} % Binomial
+\DeclareMathOperator{\BernoulliSymbol}{\mathcal{B}ernoulli} % Bernoulli
+\DeclareMathOperator{\ExponentialSymbol}{Exp}
+\DeclareMathOperator{\PoissonSymbol}{Pois}
+
+% die eigentlichen ``Funktionen''
+\newcommand{\ERW}[1] {\ERWSymbol \left[ #1 \right]}
+\newcommand{\VAR}[1] {\VARSymbol \left( #1 \right)}
+\newcommand{\VARH}[1]{\wh\VARSymbol \left( #1 \right)}
+
+\newcommand{\COV}[1] {\COVSymbol \left(#1 \right)}
+\newcommand{\COVH}[1] {\wh\COVSymbol \left( #1 \right)}
+\newcommand{\COR}[1] {\CORSymbol    \left( #1 \right)}
+\newcommand{\CORH}[1] {\wh\CORSymbol \left( #1 \right)}
+\newcommand{\PR}[1] {\PRSymbol \! \left( #1 \right)}
+\newcommand{\Normal}[1] {\NormalSymbol   \left( #1 \right)}
+\newcommand{\Binomial}[1] {\BinomialSymbol    \left( #1 \right)}
+\newcommand{\Bernoulli}[1] {\BernoulliSymbol    \left( #1 \right)}
+\newcommand{\Exponential}[1] {\ExponentialSymbol    \left( #1 \right)}
+\newcommand{\Poisson}[1] {\PoissonSymbol   \left( #1 \right)}
+
+\newcommand{\ERWi}[2]  {\Xsub{\ERWSymbol}{#1}    \left[ #2
+    \right]}
+\newcommand{\VARi}[2]  {\Xsub{\VARSymbol}{#1}    \left( #2
+    \right)}
+\newcommand{\VARHi}[2] {\Xsub{\wh\VARSymbol}{#1} \left( #2
+    \right)}
+\newcommand{\COVi}[2]  {\Xsub{\COVSymbol}{#1}    \left( #2
+    \right)}
+\newcommand{\COVHi}[2] {\Xsub{\wh\COVSymbol}{#1} \left( #2
+    \right)}
+\newcommand{\CORi}[2]  {\Xsub{\CORSymbol}{#1}    \left( #2
+    \right)}
+\newcommand{\CORHi}[2] {\Xsub{\wh\CORSymbol}{#1} \left( #2
+    \right)}
+\newcommand{\PRi}[2]   {\Xsub{\PRSymbol}{#1}     \left( #2
+    \right)}
+\newcommand{\Normali}[2]      {\Xsub{\NormalSymbol}{#1}   \left( #2
+    \right)}
+\newcommand{\Binomiali}[2]    {\Xsub{\BinomialSymbol}{#1}    \left( #2
+    \right)}
+\newcommand{\Bernoullii}[2]   {\Xsub{\BernoulliSymbol}{#1}    \left( #2
+    \right)}
+\newcommand{\Exponentiali}[2] {\Xsub{\ExponentialSymbol}{#1}    \left( #2
+    \right)}
+\newcommand{\Poissoni}[2]     {\Xsub{\PoissonSymbol}{#1}   \left( #2
+    \right)}
+\)
+</p>
+<!-- 
+    ggiraph output left aligned
+    note that this has to be included just before the body, otherwise it is overwritten by the ggiraph css which is included **after** the `theme.scss`
+    In future it would be ideal if ggiraph 1) allows to change this with `set_girafe_defaults()` 2) automatically sets this what was set for quarto `fig-align`
+ -->
+
+<style>
+.girafe_container_std {
+    text-align: left;
+}
+</style>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./010-kubuntu-setup.html">Kubuntu</a></li><li class="breadcrumb-item"><a href="./010-kubuntu-setup.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Linux setup Kubuntu</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Linux setup Kubuntu</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="installation" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="installation"><span class="header-section-number">2.1</span> Installation</h2>
+<ul>
+<li>Shrink Windows partition ( <a href="https://superuser.com/questions/1017764/how-can-i-shrink-a-windows-10-partition">Problems</a> )</li>
+<li>Boot from USB
+<ul>
+<li><a href="https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview">Create USB Stuck on Windows</a></li>
+<li><a href="https://help.ubuntu.com/community/Installation/FromUSBStickQuick">Installation from USB Stick (Quick version)</a></li>
+<li><a href="https://help.ubuntu.com/community/Installation/FromUSBStick">Installation from USB Stick</a></li>
+</ul></li>
+<li>Define partitions
+<ul>
+<li>SWAP, no mount point, 10GB, Primary,</li>
+<li>root, mount: /, 40GB, Primary, ext4</li>
+<li>home, mount: /home, as much as possible, Primary, ext4</li>
+</ul></li>
+</ul>
+</section>
+<section id="kde-wallet" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="kde-wallet"><span class="header-section-number">2.2</span> KDE Wallet</h2>
+<ul>
+<li>Usually KDE Wallet is prompted at startup</li>
+<li>Avoid by creating an empty wallet password (insecure!)
+<ul>
+<li>System Settings &gt; Account Details &gt; KDE Wallet &gt; Click “Launch Wallet Manager”</li>
+<li>Click “Change Password”</li>
+<li>Click “OK” without inserting a password</li>
+<li>Details
+<ul>
+<li><a href="https://forum.manjaro.org/t/bug-kde-wallet-is-asking-for-password-on-every-boot/33415">Manjaro Forum</a></li>
+<li><a href="https://unix.stackexchange.com/questions/420497/how-do-i-stop-kwallet-from-asking-my-password-to-let-the-system-connect-to-wifi">Unix Stackexchange</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="some-configurations-new-since-eth-computer" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="some-configurations-new-since-eth-computer"><span class="header-section-number">2.3</span> Some configurations (New since ETH Computer)</h2>
+<ul>
+<li>Avoid open file/folder with single click
+<ul>
+<li><code>System Settings</code> &gt; <code>Workspace Behavior</code> &gt; <code>General Behavior</code> &gt; Click:behavior: Double-click to open files and folders</li>
+</ul></li>
+<li>Avoid special behaviour of left screen corner (Toggle Present Windows, All desktops)
+<ul>
+<li>Same can be called with Ctrl+F10 or maybe set it manually to Alt+Q (next to Alt+tab for switching windows)</li>
+</ul></li>
+<li>Activate Compose key
+<ul>
+<li><code>Input Devies</code> &gt; <code>Keybord</code> &gt; <code>Advanced</code> &gt; <code>Configure keyboard options</code> &gt; <code>Position of Compose key</code> &gt; <code>Caps Lock</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="easy-tasks" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="easy-tasks"><span class="header-section-number">2.4</span> Easy tasks</h2>
+<ol type="1">
+<li>Setup external screen</li>
+<li>Install software
+<ul>
+<li>From Software Center
+<ul>
+<li>Kile</li>
+<li>ownCloud desktop sync client (Polybox)</li>
+<li>gscan2pdf</li>
+<li>Steam installer</li>
+<li>Inkscape</li>
+<li>Kamoso (Webcam)</li>
+<li>KColorChooser (Screen Color selection)</li>
+<li>KolourPaint</li>
+</ul></li>
+<li>From downloaded tar
+<ul>
+<li>Google Chrome</li>
+<li>R Studio</li>
+<li>Zotero (maybe better use )</li>
+</ul></li>
+<li>From Konsole
+<ul>
+<li><code>sudo apt install git-all</code> (For configuration see git chapter)</li>
+<li><code>git lfs install</code> (For git large files storage)</li>
+<li><code>sudo apt-get install network-manager-vpnc</code> (for vpn connections)</li>
+</ul></li>
+</ul></li>
+</ol>
+</section>
+<section id="installing-r" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="installing-r"><span class="header-section-number">2.5</span> Installing R</h2>
+<p>See <a href="https://itsfoss.com/install-r-ubuntu/">It’s FOSS</a>, <a href="https://cran.r-project.org/bin/linux/ubuntu/README.html">R Documentation</a>, and <a href="https://rubuntu.netlify.app/">R Ubuntu Blog</a></p>
+<ol type="1">
+<li>Add CRAN repository to apt (Exact command depends on Ubuntu version)</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">deb</span> https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Add key to repository</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-key adv <span class="at">--keyserver</span> keyserver.ubuntu.com <span class="at">--recv-keys</span> E298A3A825C0D65DFD57CBB651716619E084DAB9</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Update and install</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install r-base</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>UPDATE 2021: I guess, the process is slightly different now. See</p>
+<ul>
+<li><a href="https://cran.r-project.org/bin/linux/ubuntu/">Official R project instructions</a></li>
+<li><a href="https://docs.rstudio.com/resources/install-r/">RStudio instructions</a></li>
+</ul>
+<p>The RStudio instructions might be better if you need multiple versions of R.</p>
+<ul>
+<li><a href="https://support.rstudio.com/hc/en-us/articles/360002242413-Multiple-versions-of-R">Here</a> it says ‘To get multiple versions of R side-by-side, it’s important that you do not use your linux package manager to install R. For example, do not use apt (Debian or Ubuntu). When you install R from these package repositories, you will overwrite your existing R version, and your old version of R will no longer be available.’</li>
+<li>Now have two options
+<ul>
+<li>Install precompiled binary from RStudio Server
+<ul>
+<li>Fast</li>
+<li>Recommended</li>
+</ul></li>
+<li>Install R from source
+<ul>
+<li>Time consuming</li>
+<li>More customizable</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="remap-keyboard" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="remap-keyboard"><span class="header-section-number">2.6</span> Remap Keyboard</h2>
+<p>Alternative:</p>
+<ul>
+<li>Use a <a href="https://userbase.kde.org/Tutorials/ComposeKey">Compose Key</a>
+<ul>
+<li>Now I think this would acctually be the better option!</li>
+<li><a href="https://tuttle.github.io/python-useful/compose-key-cheat-sheet.html">Compose Key cheat sheet</a></li>
+</ul></li>
+<li><a href="https://eurkey.steffen.bruentjen.eu/">EurKey</a></li>
+</ul>
+<p>Original setup</p>
+<ol type="1">
+<li>Go to Software center and install ‘AutoKey (Qt)’</li>
+<li>Open AutoKey ( <a href="https://www.maketecheasier.com/autokey-make-your-own-keyboard-shortcuts-in-linux/">Tutorial</a> )</li>
+<li>Click on <code>New...</code> &gt; <code>Folder</code> and name it e.g Umlaute</li>
+<li>Make 6 new <code>Phrase</code> within that folder and name them ae, Ae, oe, Oe, …</li>
+<li>In the text field put the desired Character</li>
+<li>Set a hotkey (e.g.&nbsp;alt+’)</li>
+</ol>
+<p>Problem: Capital umlaute are made small. Fix: Add some Emoji after the capital Umlaut.</p>
+<p>Problem: Autokey shows up at startup. Fix: <a href="https://github.com/autokey/autokey/wiki/Troubleshooting#autokey-qt--kde-desktop-automatically-starting-autokey-shows-the-gui-during-login-even-if-show-main-window-when-starting-is-disabled">Exclude Autokey from startup session</a></p>
+<p>Next: Remap Caps Lock to Hyper Key</p>
+<ol type="1">
+<li><code>System Settings</code> &gt; <code>Imput Devices</code> &gt; <code>Keyboard</code> &gt; <code>Advanced</code> &gt; <code>Caps Lock behavior</code> &gt; Make Caps Lock an additional Hyper</li>
+<li>Reboot</li>
+</ol>
+</section>
+<section id="installing-latex" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="installing-latex"><span class="header-section-number">2.7</span> Installing Latex</h2>
+<ol type="1">
+<li>Uninstall preinstalled light TexLive with commands found on <a href="https://tex.stackexchange.com/questions/95483/how-to-remove-everything-related-to-tex-live-for-fresh-install-on-ubuntu">StackOverflow</a></li>
+<li>Install <a href="https://yihui.org/tinytex/">TinyTeX</a> from R console</li>
+<li>Add TinyTeX Built to Kile
+<ul>
+<li>Open Kile</li>
+<li><code>Settings</code> &gt; <code>Configure Kile</code> &gt; <code>Build</code></li>
+<li>Select a tool: <code>New...</code></li>
+<li>Name: RZTinyTeX</li>
+<li>Class: <custom></custom></li>
+<li>General: Command: Rscript</li>
+<li>General: Options: -e “tinytex::pdflatex(‘%source’)”</li>
+</ul></li>
+<li>Configure Shortcut for pdflatex and RZTinyTex</li>
+<li>Install biber <code>sudo apt install biber</code></li>
+</ol>
+<p><strong>Alternative: (maybe better)</strong></p>
+<p>Just install texlive-latex-extra which contains most packages… less problems… <a href="https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux">Installation guide</a></p>
+<p>Even better: Install “vanilla” Tex Live: https://tex.stackexchange.com/a/95373/202258</p>
+<p>Here the reason why “vanilla” could be better: https://tex.stackexchange.com/a/200216/202258</p>
+<p>To install a specific package: https://tex.stackexchange.com/a/73017/202258</p>
+<p>As an example you might want to try to install package <code>siunitx</code></p>
+</section>
+<section id="installing-aoe2" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="installing-aoe2"><span class="header-section-number">2.8</span> Installing AOE2</h2>
+<p>See this <a href="https://www.reddit.com/r/aoe2/comments/aa6lry/aoe2hd_on_debian_linux_via_steam_play_tutorial/">reddit article</a>. Step 2, 3 and 4 were enought.</p>
+<ol type="1">
+<li>Install steam from Software center</li>
+<li>Settings &gt; Steam Play &gt; Enable Steam Play for all other titles</li>
+<li>Install</li>
+<li>Right click on Game in steam &gt; Properties &gt; Set Launch options &gt; type ‘-nostartup’</li>
+</ol>
+</section>
+<section id="set-up-backup" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="set-up-backup"><span class="header-section-number">2.9</span> Set up Backup</h2>
+<p>See separate Chapter&nbsp;@ref(sec:backup) about backups.</p>
+</section>
+<section id="dualboot-with-windows" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="dualboot-with-windows"><span class="header-section-number">2.10</span> Dualboot with Windows</h2>
+<ul>
+<li>Select which OS to boot
+<ul>
+<li>At startup press some F key</li>
+<li>Depends on hardware, for ThinkPad X230
+<ul>
+<li><code>Enter</code> Choose one of the below options (more time to choose and explanation text)</li>
+<li><code>F1</code> Enter Bios setup utilit (Change default computer/Bios settings)</li>
+<li><code>F10</code> Diagnose hardware (never used so far)</li>
+<li><code>F12</code> Choose temporary startup device</li>
+</ul></li>
+<li>Depending where the OS is saved you have to choose from where to boot</li>
+<li>Currently
+<ul>
+<li>Kubuntu: ATA HDD2: ADATA SX300</li>
+<li>Windows: ATA HDD0: HGST HTS725050A7E630</li>
+</ul></li>
+</ul></li>
+<li>Don’t show GRUB GUI at startup
+<ul>
+<li>See <a href="https://linoxide.com/linux-how-to/hide-grub-boot-linux/">here</a></li>
+<li>Open <code>/etc/default/grub</code>
+<ul>
+<li>Change: <code>GRUB_TIMEOUT=0</code></li>
+<li>Add line: <code>GRUB_DISABLE_OS_PROBER=true</code></li>
+</ul></li>
+<li>Open shell and run <code>sudo update-grub</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="troubles" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="troubles"><span class="header-section-number">2.11</span> Troubles</h2>
+<section id="locales" class="level3" data-number="2.11.1">
+<h3 data-number="2.11.1" class="anchored" data-anchor-id="locales"><span class="header-section-number">2.11.1</span> Locales</h3>
+<section id="new" class="level4">
+<h4 class="anchored" data-anchor-id="new">New</h4>
+<ul>
+<li>Set LANG to en_US.UTF-8</li>
+<li>Set Formats to de_CH.UTF-8 (NOT en_US.UTF-8)</li>
+<li>add file <code>.Renviron</code> to home directory with content <code>LANGUAGE="en_US.utf8"</code></li>
+</ul>
+</section>
+<section id="old-way" class="level4">
+<h4 class="anchored" data-anchor-id="old-way">Old Way:</h4>
+<p>Only necessary when Regional settings: Switzerland en</p>
+<p>Some actions at Konsole might give error ‘perl: warning: Setting locale failed.’</p>
+<p>See solution <a href="https://libre-software.net/ubuntu-setting-locale/">here</a></p>
+<p>Check which local settings are missing</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">locale</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Might return ‘locale: Cannot set LC_ALL to default locale: No such file or directory’</p>
+<p>The solution is to export the missing locales to ~/.bash_profile. The following command is a one-command line:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"export LANGUAGE=en_US.UTF-8 export LANG=en_US.UTF-8 export LC_ALL=en_US.UTF-8"</span><span class="op">&gt;&gt;</span>~/.bash_profile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="dvd" class="level3" data-number="2.11.2">
+<h3 data-number="2.11.2" class="anchored" data-anchor-id="dvd"><span class="header-section-number">2.11.2</span> DVD</h3>
+<p>See <a href="https://itsfoss.com/play-dvd-ubuntu-1310/">It’s FOSS</a></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install libdvd-pkg</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg-reconfigure libdvd-pkg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In between always click OK/Yes.</p>
+</section>
+<section id="scrolling-with-touchpat" class="level3" data-number="2.11.3">
+<h3 data-number="2.11.3" class="anchored" data-anchor-id="scrolling-with-touchpat"><span class="header-section-number">2.11.3</span> Scrolling with touchpat</h3>
+<ul>
+<li>Kinetic scrolling is not enabled with default driver</li>
+<li>Solution: use another driver
+<ul>
+<li>Open Terminal</li>
+<li><code>sudo apt install xserver-xorg-input-synaptics</code></li>
+<li>reboot</li>
+<li>go to <code>System settings</code> &gt; <code>Input Devices</code> &gt; <code>Touchpad</code></li>
+<li>In <code>Scrolling</code>
+<ul>
+<li>Enable two-finger scrolling (vertical and horizontal)</li>
+<li>Enable reverse scrolling</li>
+</ul></li>
+<li>In `Pointer Motion
+<ul>
+<li>Adjust speed</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed" class="level3" data-number="2.11.4">
+<h3 data-number="2.11.4" class="anchored" data-anchor-id="during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed"><span class="header-section-number">2.11.4</span> During shutdown, computer goes to sleep mode if lid is closed</h3>
+<ul>
+<li><code>System Settings</code> &gt; <code>Power Management</code> &gt; <code>Energy Saving</code> &gt; When laptop lid closed: Turn off screen</li>
+</ul>
+</section>
+<section id="search-in-dolphin-is-slow" class="level3" data-number="2.11.5">
+<h3 data-number="2.11.5" class="anchored" data-anchor-id="search-in-dolphin-is-slow"><span class="header-section-number">2.11.5</span> Search in Dolphin is slow</h3>
+<ul>
+<li>Make sure your search engine is baloo</li>
+<li><code>System Settings</code> &gt; <code>Search</code> &gt; <code>File Search</code> &gt; Do not search in these locations
+<ul>
+<li>exclude Drives which you want to index</li>
+</ul></li>
+<li><code>System Settings</code> &gt; <code>Search</code> &gt; <code>File Search</code> &gt; Also index file content
+<ul>
+<li>If you want to search for content within pdfs, text files, …</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="useful-software" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="useful-software"><span class="header-section-number">2.12</span> Useful software</h2>
+<ul>
+<li>From Software Center
+<ul>
+<li>GIMP</li>
+<li>Xournal (Handwritten notes, sign)
+<ul>
+<li><a href="https://unix.stackexchange.com/questions/85873/how-can-i-add-a-signature-png-to-a-pdf-in-linux">How can I add a signature to a PDF</a></li>
+</ul></li>
+<li>Julia</li>
+<li>KBackup</li>
+</ul></li>
+<li>Via apt
+<ul>
+<li>kup-backup</li>
+</ul></li>
+<li>Other
+<ul>
+<li><a href="https://minetime.ai/">MineTime calender</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="inkscape" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="inkscape"><span class="header-section-number">2.13</span> Inkscape</h2>
+<ul>
+<li>Install inkscape (Software Center or <code>sudo apt-get install inkscape</code>)</li>
+<li>Read <a href="https://textext.github.io/textext/install/linux.html">TexText 1.0 Docs</a> to be able to use latex in inkscape
+<ul>
+<li>I was necessary to run <code>python3 setup.py</code> instead of <code>python setup.py</code> during installation…</li>
+</ul></li>
+</ul>
+</section>
+<section id="maybe-useful" class="level2" data-number="2.14">
+<h2 data-number="2.14" class="anchored" data-anchor-id="maybe-useful"><span class="header-section-number">2.14</span> Maybe useful</h2>
+<ul>
+<li><code>System Settings</code> &gt; <code>Imput Devices</code> &gt; <code>Keyboard</code> &gt; <code>Hardware</code> &gt; NumbLock Turn on</li>
+<li><code>ownCloud</code> &gt; <code>General</code> &gt; <code>Edit Ignored Files</code> &gt; <code>Add</code> &gt; ‘.Rproj.user’</li>
+<li>install Computer Modern font (for same font as latex pdf documents) with <code>sudo apt install fonts-cmu</code></li>
+</ul>
+</section>
+<section id="connect-with-phone" class="level2" data-number="2.15">
+<h2 data-number="2.15" class="anchored" data-anchor-id="connect-with-phone"><span class="header-section-number">2.15</span> Connect with Phone</h2>
+<ul>
+<li><a href="https://github.com/Genymobile/scrcpy">scrcpy</a>
+<ul>
+<li>If slow USB connection: limit resolution with <code>scrcpy -m 1920</code></li>
+</ul></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.pas.webcam&amp;hl=en&amp;gl=US">IP Webcam</a></li>
+<li>KDE Connect</li>
+</ul>
+</section>
+<section id="mouse-middle-click-scrolling-auto-scrolling" class="level2" data-number="2.16">
+<h2 data-number="2.16" class="anchored" data-anchor-id="mouse-middle-click-scrolling-auto-scrolling"><span class="header-section-number">2.16</span> Mouse middle click scrolling (Auto-Scrolling)</h2>
+<p>See <a href="https://unix.stackexchange.com/questions/58900/how-to-scroll-the-screen-using-the-middle-click/421672#421672">here</a></p>
+<p>However,</p>
+<ul>
+<li>it scrolls too slow.</li>
+<li>Dagerouse that something is pasted (Mouse middle click is still paste)</li>
+<li>Maybe don’t use it…</li>
+</ul>
+</section>
+<section id="logitech-mouse" class="level2" data-number="2.17">
+<h2 data-number="2.17" class="anchored" data-anchor-id="logitech-mouse"><span class="header-section-number">2.17</span> Logitech Mouse</h2>
+<p>Logitech Unifying Receivers for Linux <a href="https://pwr-solaar.github.io/Solaar/">Solaar</a></p>
+<ul>
+<li>Download from Discover</li>
+<li>Add devices</li>
+</ul>
+</section>
+<section id="eth-stuff" class="level2" data-number="2.18">
+<h2 data-number="2.18" class="anchored" data-anchor-id="eth-stuff"><span class="header-section-number">2.18</span> ETH stuff</h2>
+<ul>
+<li><a href="https://ethz.ch/content/dam/ethz/associates/services/Service/IT-Services/files/catalogue/email-calendar/04-02_Mailbox_Mailclient-Thunderbird_DE.pdf">Thunderbird ETH mail configuration</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/example\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./001-file-sys.html" class="pagination-link" aria-label="File System">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">File System</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./011-keyboard.html" class="pagination-link" aria-label="Remap keybord">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Remap keybord</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/quarto-dev/quarto-demo/edit/master/010-kubuntu-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
