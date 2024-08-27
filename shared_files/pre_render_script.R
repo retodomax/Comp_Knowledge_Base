@@ -12,7 +12,7 @@
 ##     command in R which only copies files if they are no longer up-to-date)
 ## POSSIBLE PROBLME:
 ## it could be that those files are now always detected as a new file by git?
-## CHECK if this is the case
+## CHECK if this is the case (I think not, because copy a file will not change the 'last edit' timestamp)
 ## 3) copies files into project if necessary
 ## 4) returns error if no include files are in project directory
 

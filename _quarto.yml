@@ -7,12 +7,12 @@ book:
   author: "[Reto Zihlmann](https://retodomax.github.io)"
   date: today
   date-format: iso
-  repo-url: https://github.com/quarto-dev/quarto-demo
-  repo-branch: master
+  repo-url: https://github.com/retodomax/Comp_Knowledge_Base
+  repo-branch: main
   repo-actions: [edit, issue]
   favicon: "figures/01_cover/cover_drawing.png"
   twitter-card: true
-  site-url: https://example.com
+  site-url: https://retodomax.github.io/Comp_Knowledge_Base
   chapters:
     - index.qmd
     - part: Computer
