@@ -1,1 +1,1 @@
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://retodomax.github.io/Comp_Knowledge_Base/sitemap.xml
