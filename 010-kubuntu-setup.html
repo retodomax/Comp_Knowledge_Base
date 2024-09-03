@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.547">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Linux setup Kubuntu – Computer Knowledge Base</title>
+<title>Computer Knowledge Base - 2&nbsp; Linux setup Kubuntu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta name="twitter:title" content="2&nbsp; Linux setup Kubuntu – Computer Knowledge Base">
+<meta name="twitter:title" content="Computer Knowledge Base - 2&nbsp; Linux setup Kubuntu">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -116,13 +116,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./010-kubuntu-setup.html">Kubuntu</a></li><li class="breadcrumb-item"><a href="./010-kubuntu-setup.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Linux setup Kubuntu</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -155,9 +155,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Computer</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -172,9 +172,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Kubuntu</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -239,31 +239,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation"><span class="header-section-number">3</span> Installation</a></li>
-  <li><a href="#kde-wallet" id="toc-kde-wallet" class="nav-link" data-scroll-target="#kde-wallet"><span class="header-section-number">4</span> KDE Wallet</a></li>
-  <li><a href="#some-configurations-new-since-eth-computer" id="toc-some-configurations-new-since-eth-computer" class="nav-link" data-scroll-target="#some-configurations-new-since-eth-computer"><span class="header-section-number">5</span> Some configurations (New since ETH Computer)</a></li>
-  <li><a href="#easy-tasks" id="toc-easy-tasks" class="nav-link" data-scroll-target="#easy-tasks"><span class="header-section-number">6</span> Easy tasks</a></li>
-  <li><a href="#installing-r" id="toc-installing-r" class="nav-link" data-scroll-target="#installing-r"><span class="header-section-number">7</span> Installing R</a></li>
-  <li><a href="#remap-keyboard" id="toc-remap-keyboard" class="nav-link" data-scroll-target="#remap-keyboard"><span class="header-section-number">8</span> Remap Keyboard</a></li>
-  <li><a href="#installing-latex" id="toc-installing-latex" class="nav-link" data-scroll-target="#installing-latex"><span class="header-section-number">9</span> Installing Latex</a></li>
-  <li><a href="#installing-aoe2" id="toc-installing-aoe2" class="nav-link" data-scroll-target="#installing-aoe2"><span class="header-section-number">10</span> Installing AOE2</a></li>
-  <li><a href="#set-up-backup" id="toc-set-up-backup" class="nav-link" data-scroll-target="#set-up-backup"><span class="header-section-number">11</span> Set up Backup</a></li>
-  <li><a href="#dualboot-with-windows" id="toc-dualboot-with-windows" class="nav-link" data-scroll-target="#dualboot-with-windows"><span class="header-section-number">12</span> Dualboot with Windows</a></li>
-  <li><a href="#troubles" id="toc-troubles" class="nav-link" data-scroll-target="#troubles"><span class="header-section-number">13</span> Troubles</a>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation"><span class="header-section-number">2.1</span> Installation</a></li>
+  <li><a href="#kde-wallet" id="toc-kde-wallet" class="nav-link" data-scroll-target="#kde-wallet"><span class="header-section-number">2.2</span> KDE Wallet</a></li>
+  <li><a href="#some-configurations-new-since-eth-computer" id="toc-some-configurations-new-since-eth-computer" class="nav-link" data-scroll-target="#some-configurations-new-since-eth-computer"><span class="header-section-number">2.3</span> Some configurations (New since ETH Computer)</a></li>
+  <li><a href="#easy-tasks" id="toc-easy-tasks" class="nav-link" data-scroll-target="#easy-tasks"><span class="header-section-number">2.4</span> Easy tasks</a></li>
+  <li><a href="#installing-r" id="toc-installing-r" class="nav-link" data-scroll-target="#installing-r"><span class="header-section-number">2.5</span> Installing R</a></li>
+  <li><a href="#remap-keyboard" id="toc-remap-keyboard" class="nav-link" data-scroll-target="#remap-keyboard"><span class="header-section-number">2.6</span> Remap Keyboard</a></li>
+  <li><a href="#installing-latex" id="toc-installing-latex" class="nav-link" data-scroll-target="#installing-latex"><span class="header-section-number">2.7</span> Installing Latex</a></li>
+  <li><a href="#installing-aoe2" id="toc-installing-aoe2" class="nav-link" data-scroll-target="#installing-aoe2"><span class="header-section-number">2.8</span> Installing AOE2</a></li>
+  <li><a href="#set-up-backup" id="toc-set-up-backup" class="nav-link" data-scroll-target="#set-up-backup"><span class="header-section-number">2.9</span> Set up Backup</a></li>
+  <li><a href="#dualboot-with-windows" id="toc-dualboot-with-windows" class="nav-link" data-scroll-target="#dualboot-with-windows"><span class="header-section-number">2.10</span> Dualboot with Windows</a></li>
+  <li><a href="#troubles" id="toc-troubles" class="nav-link" data-scroll-target="#troubles"><span class="header-section-number">2.11</span> Troubles</a>
   <ul class="collapse">
-  <li><a href="#locales" id="toc-locales" class="nav-link" data-scroll-target="#locales"><span class="header-section-number">13.1</span> Locales</a></li>
-  <li><a href="#dvd" id="toc-dvd" class="nav-link" data-scroll-target="#dvd"><span class="header-section-number">13.2</span> DVD</a></li>
-  <li><a href="#scrolling-with-touchpat" id="toc-scrolling-with-touchpat" class="nav-link" data-scroll-target="#scrolling-with-touchpat"><span class="header-section-number">13.3</span> Scrolling with touchpat</a></li>
-  <li><a href="#during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed" id="toc-during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed" class="nav-link" data-scroll-target="#during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed"><span class="header-section-number">13.4</span> During shutdown, computer goes to sleep mode if lid is closed</a></li>
-  <li><a href="#search-in-dolphin-is-slow" id="toc-search-in-dolphin-is-slow" class="nav-link" data-scroll-target="#search-in-dolphin-is-slow"><span class="header-section-number">13.5</span> Search in Dolphin is slow</a></li>
+  <li><a href="#locales" id="toc-locales" class="nav-link" data-scroll-target="#locales"><span class="header-section-number">2.11.1</span> Locales</a></li>
+  <li><a href="#dvd" id="toc-dvd" class="nav-link" data-scroll-target="#dvd"><span class="header-section-number">2.11.2</span> DVD</a></li>
+  <li><a href="#scrolling-with-touchpat" id="toc-scrolling-with-touchpat" class="nav-link" data-scroll-target="#scrolling-with-touchpat"><span class="header-section-number">2.11.3</span> Scrolling with touchpat</a></li>
+  <li><a href="#during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed" id="toc-during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed" class="nav-link" data-scroll-target="#during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed"><span class="header-section-number">2.11.4</span> During shutdown, computer goes to sleep mode if lid is closed</a></li>
+  <li><a href="#search-in-dolphin-is-slow" id="toc-search-in-dolphin-is-slow" class="nav-link" data-scroll-target="#search-in-dolphin-is-slow"><span class="header-section-number">2.11.5</span> Search in Dolphin is slow</a></li>
   </ul></li>
-  <li><a href="#useful-software" id="toc-useful-software" class="nav-link" data-scroll-target="#useful-software"><span class="header-section-number">14</span> Useful software</a></li>
-  <li><a href="#inkscape" id="toc-inkscape" class="nav-link" data-scroll-target="#inkscape"><span class="header-section-number">15</span> Inkscape</a></li>
-  <li><a href="#maybe-useful" id="toc-maybe-useful" class="nav-link" data-scroll-target="#maybe-useful"><span class="header-section-number">16</span> Maybe useful</a></li>
-  <li><a href="#connect-with-phone" id="toc-connect-with-phone" class="nav-link" data-scroll-target="#connect-with-phone"><span class="header-section-number">17</span> Connect with Phone</a></li>
-  <li><a href="#mouse-middle-click-scrolling-auto-scrolling" id="toc-mouse-middle-click-scrolling-auto-scrolling" class="nav-link" data-scroll-target="#mouse-middle-click-scrolling-auto-scrolling"><span class="header-section-number">18</span> Mouse middle click scrolling (Auto-Scrolling)</a></li>
-  <li><a href="#logitech-mouse" id="toc-logitech-mouse" class="nav-link" data-scroll-target="#logitech-mouse"><span class="header-section-number">19</span> Logitech Mouse</a></li>
-  <li><a href="#eth-stuff" id="toc-eth-stuff" class="nav-link" data-scroll-target="#eth-stuff"><span class="header-section-number">20</span> ETH stuff</a></li>
+  <li><a href="#useful-software" id="toc-useful-software" class="nav-link" data-scroll-target="#useful-software"><span class="header-section-number">2.12</span> Useful software</a></li>
+  <li><a href="#inkscape" id="toc-inkscape" class="nav-link" data-scroll-target="#inkscape"><span class="header-section-number">2.13</span> Inkscape</a></li>
+  <li><a href="#maybe-useful" id="toc-maybe-useful" class="nav-link" data-scroll-target="#maybe-useful"><span class="header-section-number">2.14</span> Maybe useful</a></li>
+  <li><a href="#connect-with-phone" id="toc-connect-with-phone" class="nav-link" data-scroll-target="#connect-with-phone"><span class="header-section-number">2.15</span> Connect with Phone</a></li>
+  <li><a href="#mouse-middle-click-scrolling-auto-scrolling" id="toc-mouse-middle-click-scrolling-auto-scrolling" class="nav-link" data-scroll-target="#mouse-middle-click-scrolling-auto-scrolling"><span class="header-section-number">2.16</span> Mouse middle click scrolling (Auto-Scrolling)</a></li>
+  <li><a href="#logitech-mouse" id="toc-logitech-mouse" class="nav-link" data-scroll-target="#logitech-mouse"><span class="header-section-number">2.17</span> Logitech Mouse</a></li>
+  <li><a href="#eth-stuff" id="toc-eth-stuff" class="nav-link" data-scroll-target="#eth-stuff"><span class="header-section-number">2.18</span> ETH stuff</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/retodomax/Comp_Knowledge_Base/edit/main/010-kubuntu-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/retodomax/Comp_Knowledge_Base/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -393,8 +393,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="installation" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="installation"><span class="header-section-number">3</span> Installation</h2>
+<section id="installation" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="installation"><span class="header-section-number">2.1</span> Installation</h2>
 <ul>
 <li>Shrink Windows partition ( <a href="https://superuser.com/questions/1017764/how-can-i-shrink-a-windows-10-partition">Problems</a> )</li>
 <li>Boot from USB
@@ -411,8 +411,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="kde-wallet" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="kde-wallet"><span class="header-section-number">4</span> KDE Wallet</h2>
+<section id="kde-wallet" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="kde-wallet"><span class="header-section-number">2.2</span> KDE Wallet</h2>
 <ul>
 <li>Usually KDE Wallet is prompted at startup</li>
 <li>Avoid by creating an empty wallet password (insecure!)
@@ -428,8 +428,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="some-configurations-new-since-eth-computer" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="some-configurations-new-since-eth-computer"><span class="header-section-number">5</span> Some configurations (New since ETH Computer)</h2>
+<section id="some-configurations-new-since-eth-computer" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="some-configurations-new-since-eth-computer"><span class="header-section-number">2.3</span> Some configurations (New since ETH Computer)</h2>
 <ul>
 <li>Avoid open file/folder with single click
 <ul>
@@ -445,8 +445,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="easy-tasks" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="easy-tasks"><span class="header-section-number">6</span> Easy tasks</h2>
+<section id="easy-tasks" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="easy-tasks"><span class="header-section-number">2.4</span> Easy tasks</h2>
 <ol type="1">
 <li>Setup external screen</li>
 <li>Install software
@@ -477,8 +477,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ol>
 </section>
-<section id="installing-r" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="installing-r"><span class="header-section-number">7</span> Installing R</h2>
+<section id="installing-r" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="installing-r"><span class="header-section-number">2.5</span> Installing R</h2>
 <p>See <a href="https://itsfoss.com/install-r-ubuntu/">It’s FOSS</a>, <a href="https://cran.r-project.org/bin/linux/ubuntu/README.html">R Documentation</a>, and <a href="https://rubuntu.netlify.app/">R Ubuntu Blog</a></p>
 <ol type="1">
 <li>Add CRAN repository to apt (Exact command depends on Ubuntu version)</li>
@@ -516,8 +516,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="remap-keyboard" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="remap-keyboard"><span class="header-section-number">8</span> Remap Keyboard</h2>
+<section id="remap-keyboard" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="remap-keyboard"><span class="header-section-number">2.6</span> Remap Keyboard</h2>
 <p>Alternative:</p>
 <ul>
 <li>Use a <a href="https://userbase.kde.org/Tutorials/ComposeKey">Compose Key</a>
@@ -544,8 +544,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Reboot</li>
 </ol>
 </section>
-<section id="installing-latex" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="installing-latex"><span class="header-section-number">9</span> Installing Latex</h2>
+<section id="installing-latex" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="installing-latex"><span class="header-section-number">2.7</span> Installing Latex</h2>
 <ol type="1">
 <li>Uninstall preinstalled light TexLive with commands found on <a href="https://tex.stackexchange.com/questions/95483/how-to-remove-everything-related-to-tex-live-for-fresh-install-on-ubuntu">StackOverflow</a></li>
 <li>Install <a href="https://yihui.org/tinytex/">TinyTeX</a> from R console</li>
@@ -569,8 +569,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To install a specific package: https://tex.stackexchange.com/a/73017/202258</p>
 <p>As an example you might want to try to install package <code>siunitx</code></p>
 </section>
-<section id="installing-aoe2" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="installing-aoe2"><span class="header-section-number">10</span> Installing AOE2</h2>
+<section id="installing-aoe2" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="installing-aoe2"><span class="header-section-number">2.8</span> Installing AOE2</h2>
 <p>See this <a href="https://www.reddit.com/r/aoe2/comments/aa6lry/aoe2hd_on_debian_linux_via_steam_play_tutorial/">reddit article</a>. Step 2, 3 and 4 were enought.</p>
 <ol type="1">
 <li>Install steam from Software center</li>
@@ -579,12 +579,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Right click on Game in steam &gt; Properties &gt; Set Launch options &gt; type ‘-nostartup’</li>
 </ol>
 </section>
-<section id="set-up-backup" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="set-up-backup"><span class="header-section-number">11</span> Set up Backup</h2>
+<section id="set-up-backup" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="set-up-backup"><span class="header-section-number">2.9</span> Set up Backup</h2>
 <p>See separate Chapter&nbsp;@ref(sec:backup) about backups.</p>
 </section>
-<section id="dualboot-with-windows" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="dualboot-with-windows"><span class="header-section-number">12</span> Dualboot with Windows</h2>
+<section id="dualboot-with-windows" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="dualboot-with-windows"><span class="header-section-number">2.10</span> Dualboot with Windows</h2>
 <ul>
 <li>Select which OS to boot
 <ul>
@@ -615,20 +615,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="troubles" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="troubles"><span class="header-section-number">13</span> Troubles</h2>
-<section id="locales" class="level3" data-number="13.1">
-<h3 data-number="13.1" class="anchored" data-anchor-id="locales"><span class="header-section-number">13.1</span> Locales</h3>
-<section id="new" class="level4" data-number="13.1.1">
-<h4 data-number="13.1.1" class="anchored" data-anchor-id="new"><span class="header-section-number">13.1.1</span> New</h4>
+<section id="troubles" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="troubles"><span class="header-section-number">2.11</span> Troubles</h2>
+<section id="locales" class="level3" data-number="2.11.1">
+<h3 data-number="2.11.1" class="anchored" data-anchor-id="locales"><span class="header-section-number">2.11.1</span> Locales</h3>
+<section id="new" class="level4">
+<h4 class="anchored" data-anchor-id="new">New</h4>
 <ul>
 <li>Set LANG to en_US.UTF-8</li>
 <li>Set Formats to de_CH.UTF-8 (NOT en_US.UTF-8)</li>
 <li>add file <code>.Renviron</code> to home directory with content <code>LANGUAGE="en_US.utf8"</code></li>
 </ul>
 </section>
-<section id="old-way" class="level4" data-number="13.1.2">
-<h4 data-number="13.1.2" class="anchored" data-anchor-id="old-way"><span class="header-section-number">13.1.2</span> Old Way:</h4>
+<section id="old-way" class="level4">
+<h4 class="anchored" data-anchor-id="old-way">Old Way:</h4>
 <p>Only necessary when Regional settings: Switzerland en</p>
 <p>Some actions at Konsole might give error ‘perl: warning: Setting locale failed.’</p>
 <p>See solution <a href="https://libre-software.net/ubuntu-setting-locale/">here</a></p>
@@ -639,15 +639,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"export LANGUAGE=en_US.UTF-8 export LANG=en_US.UTF-8 export LC_ALL=en_US.UTF-8"</span><span class="op">&gt;&gt;</span>~/.bash_profile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="dvd" class="level3" data-number="13.2">
-<h3 data-number="13.2" class="anchored" data-anchor-id="dvd"><span class="header-section-number">13.2</span> DVD</h3>
+<section id="dvd" class="level3" data-number="2.11.2">
+<h3 data-number="2.11.2" class="anchored" data-anchor-id="dvd"><span class="header-section-number">2.11.2</span> DVD</h3>
 <p>See <a href="https://itsfoss.com/play-dvd-ubuntu-1310/">It’s FOSS</a></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install libdvd-pkg</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg-reconfigure libdvd-pkg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In between always click OK/Yes.</p>
 </section>
-<section id="scrolling-with-touchpat" class="level3" data-number="13.3">
-<h3 data-number="13.3" class="anchored" data-anchor-id="scrolling-with-touchpat"><span class="header-section-number">13.3</span> Scrolling with touchpat</h3>
+<section id="scrolling-with-touchpat" class="level3" data-number="2.11.3">
+<h3 data-number="2.11.3" class="anchored" data-anchor-id="scrolling-with-touchpat"><span class="header-section-number">2.11.3</span> Scrolling with touchpat</h3>
 <ul>
 <li>Kinetic scrolling is not enabled with default driver</li>
 <li>Solution: use another driver
@@ -668,14 +668,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed" class="level3" data-number="13.4">
-<h3 data-number="13.4" class="anchored" data-anchor-id="during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed"><span class="header-section-number">13.4</span> During shutdown, computer goes to sleep mode if lid is closed</h3>
+<section id="during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed" class="level3" data-number="2.11.4">
+<h3 data-number="2.11.4" class="anchored" data-anchor-id="during-shutdown-computer-goes-to-sleep-mode-if-lid-is-closed"><span class="header-section-number">2.11.4</span> During shutdown, computer goes to sleep mode if lid is closed</h3>
 <ul>
 <li><code>System Settings</code> &gt; <code>Power Management</code> &gt; <code>Energy Saving</code> &gt; When laptop lid closed: Turn off screen</li>
 </ul>
 </section>
-<section id="search-in-dolphin-is-slow" class="level3" data-number="13.5">
-<h3 data-number="13.5" class="anchored" data-anchor-id="search-in-dolphin-is-slow"><span class="header-section-number">13.5</span> Search in Dolphin is slow</h3>
+<section id="search-in-dolphin-is-slow" class="level3" data-number="2.11.5">
+<h3 data-number="2.11.5" class="anchored" data-anchor-id="search-in-dolphin-is-slow"><span class="header-section-number">2.11.5</span> Search in Dolphin is slow</h3>
 <ul>
 <li>Make sure your search engine is baloo</li>
 <li><code>System Settings</code> &gt; <code>Search</code> &gt; <code>File Search</code> &gt; Do not search in these locations
@@ -689,8 +689,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="useful-software" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="useful-software"><span class="header-section-number">14</span> Useful software</h2>
+<section id="useful-software" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="useful-software"><span class="header-section-number">2.12</span> Useful software</h2>
 <ul>
 <li>From Software Center
 <ul>
@@ -712,8 +712,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="inkscape" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="inkscape"><span class="header-section-number">15</span> Inkscape</h2>
+<section id="inkscape" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="inkscape"><span class="header-section-number">2.13</span> Inkscape</h2>
 <ul>
 <li>Install inkscape (Software Center or <code>sudo apt-get install inkscape</code>)</li>
 <li>Read <a href="https://textext.github.io/textext/install/linux.html">TexText 1.0 Docs</a> to be able to use latex in inkscape
@@ -722,16 +722,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="maybe-useful" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="maybe-useful"><span class="header-section-number">16</span> Maybe useful</h2>
+<section id="maybe-useful" class="level2" data-number="2.14">
+<h2 data-number="2.14" class="anchored" data-anchor-id="maybe-useful"><span class="header-section-number">2.14</span> Maybe useful</h2>
 <ul>
 <li><code>System Settings</code> &gt; <code>Imput Devices</code> &gt; <code>Keyboard</code> &gt; <code>Hardware</code> &gt; NumbLock Turn on</li>
 <li><code>ownCloud</code> &gt; <code>General</code> &gt; <code>Edit Ignored Files</code> &gt; <code>Add</code> &gt; ‘.Rproj.user’</li>
 <li>install Computer Modern font (for same font as latex pdf documents) with <code>sudo apt install fonts-cmu</code></li>
 </ul>
 </section>
-<section id="connect-with-phone" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="connect-with-phone"><span class="header-section-number">17</span> Connect with Phone</h2>
+<section id="connect-with-phone" class="level2" data-number="2.15">
+<h2 data-number="2.15" class="anchored" data-anchor-id="connect-with-phone"><span class="header-section-number">2.15</span> Connect with Phone</h2>
 <ul>
 <li><a href="https://github.com/Genymobile/scrcpy">scrcpy</a>
 <ul>
@@ -741,8 +741,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>KDE Connect</li>
 </ul>
 </section>
-<section id="mouse-middle-click-scrolling-auto-scrolling" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="mouse-middle-click-scrolling-auto-scrolling"><span class="header-section-number">18</span> Mouse middle click scrolling (Auto-Scrolling)</h2>
+<section id="mouse-middle-click-scrolling-auto-scrolling" class="level2" data-number="2.16">
+<h2 data-number="2.16" class="anchored" data-anchor-id="mouse-middle-click-scrolling-auto-scrolling"><span class="header-section-number">2.16</span> Mouse middle click scrolling (Auto-Scrolling)</h2>
 <p>See <a href="https://unix.stackexchange.com/questions/58900/how-to-scroll-the-screen-using-the-middle-click/421672#421672">here</a></p>
 <p>However,</p>
 <ul>
@@ -751,16 +751,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Maybe don’t use it…</li>
 </ul>
 </section>
-<section id="logitech-mouse" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="logitech-mouse"><span class="header-section-number">19</span> Logitech Mouse</h2>
+<section id="logitech-mouse" class="level2" data-number="2.17">
+<h2 data-number="2.17" class="anchored" data-anchor-id="logitech-mouse"><span class="header-section-number">2.17</span> Logitech Mouse</h2>
 <p>Logitech Unifying Receivers for Linux <a href="https://pwr-solaar.github.io/Solaar/">Solaar</a></p>
 <ul>
 <li>Download from Discover</li>
 <li>Add devices</li>
 </ul>
 </section>
-<section id="eth-stuff" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="eth-stuff"><span class="header-section-number">20</span> ETH stuff</h2>
+<section id="eth-stuff" class="level2" data-number="2.18">
+<h2 data-number="2.18" class="anchored" data-anchor-id="eth-stuff"><span class="header-section-number">2.18</span> ETH stuff</h2>
 <ul>
 <li><a href="https://ethz.ch/content/dam/ethz/associates/services/Service/IT-Services/files/catalogue/email-calendar/04-02_Mailbox_Mailclient-Thunderbird_DE.pdf">Thunderbird ETH mail configuration</a></li>
 </ul>
@@ -804,7 +804,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -836,29 +847,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/retodomax\.github\.io\/Comp_Knowledge_Base");
@@ -866,15 +855,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -916,11 +900,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1196,12 +1176,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./001-file-sys.html" class="pagination-link" aria-label="File System">
+      <a href="./001-file-sys.html" class="pagination-link  aria-label=" &lt;span="" system&lt;="" span&gt;"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">File System</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./011-keyboard.html" class="pagination-link" aria-label="Remap keybord">
+      <a href="./011-keyboard.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Remap keybord</span>">
         <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Remap keybord</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
