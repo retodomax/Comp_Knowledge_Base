@@ -318,8 +318,3 @@ Logitech Unifying Receivers for Linux [Solaar](https://pwr-solaar.github.io/Sola
 * Download from Discover
 * Add devices
 
-
-
-# ETH stuff
-
-* [Thunderbird ETH mail configuration](https://ethz.ch/content/dam/ethz/associates/services/Service/IT-Services/files/catalogue/email-calendar/04-02_Mailbox_Mailclient-Thunderbird_DE.pdf)
