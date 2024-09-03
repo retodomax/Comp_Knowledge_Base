@@ -78,3 +78,6 @@ return
     - Place the shortcut in that folder
 7. Restart Computer and see if it works
 
+# Use WinCompose
+
+* [github: wincompose](https://github.com/samhocevar/wincompose)
